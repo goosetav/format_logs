@@ -124,4 +124,4 @@ module FormatLogs
 
 end
 
-ActiveSupport::BufferedLogger.send :include, FormattedLogger
+ActiveSupport::BufferedLogger.send :include, FormatLogs
