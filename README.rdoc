@@ -1,26 +1,50 @@
-= format_logs
+= format_logs - basic log formatting
 
-* {Homepage}[http://rubygems.org/gems/format_logs]
+* {Homepage}[http://github.com/goosetav/format_logs]
 * {Documentation}[http://rubydoc.info/gems/format_logs/frames]
 
 == Description
 
-TODO: Description
+Adds some simple formatting to the standard Rails BufferedLogger class.
+
+This solution aims to be something between the default logging which is missing information such as
+timestamps, process IDs and severity levels and a full logging solution like [log4r|http://log4r.rubyforge.org/]
+
+Gem inspired by Paul Downman's [https://github.com/pauldowman/better_logging]
 
 == Features
 
+Configurable settings - accepts a hash of options to adjust the output format.
+
 == Examples
 
-  require 'format_logs'
+These are the defaults
+
+  FormatLogs.settings = {
+    :time_format => '%Y-%m-%d %H:%M:%S %z',
+    :show_pid => true,
+    :show_host => true,
+    :show_time => true
+  }
+
+you can pass any combination of options.
 
 == Requirements
 
+  Rails 3.0+
+
 == Install
 
-  $ gem install format_logs
+add:
+
+  gem require 'format_logs'
+  
+to youe Gemfile and then run:
+
+  bundle update format_logs  
 
 == Copyright
 
-Copyright (c) 2011 erik
+Copyright (c) 2011 Erik Gustavson
 
 See LICENSE.txt for details.

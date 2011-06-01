@@ -1,9 +1,27 @@
 name: format_logs
-summary: "TODO: Summary"
-description: "TODO: Description"
+version: 0.1.0
+summary: "Adds some basic formatting to the default rails logs"
+description: "Adds some basic formatting to the default rails logs"
 license: MIT
-authors: erik
-homepage: http://rubygems.org/gems/format_logs
+authors: goosetav
+homepage: http://github.com/goosetav/format_logs
+post_install_message: |
+  *********************************************
+  
+  Add the following to your Gemfile to activate
+  
+    gem "format_logs"
+  
+  Configuration options can be set by:
+  
+  FormatLogs.settings = {...}
+  
+  see README.rdoc for more details
+  
+  *********************************************
+
+dependencies:
+  rails: >= 3.0
 
 development_dependencies:
   ore-tasks: ~> 0.4
