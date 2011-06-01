@@ -8,9 +8,9 @@
 Adds some simple formatting to the standard Rails BufferedLogger class.
 
 This solution aims to be something between the default logging which is missing information such as
-timestamps, process IDs and severity levels and a full logging solution like [log4r|http://log4r.rubyforge.org/]
+timestamps, process IDs and severity levels and a full logging solution like {log4r}[http://log4r.rubyforge.org/]
 
-Gem inspired by Paul Downman's [https://github.com/pauldowman/better_logging]
+Gem inspired by Paul Downman's {better_logging}[https://github.com/pauldowman/better_logging]
 
 == Features
 
@@ -27,7 +27,8 @@ These are the defaults
     :show_time => true
   }
 
-you can pass any combination of options.
+you can pass any combination of options you want:
+  FormatLogs.setting = {:show_pid => false}
 
 == Requirements
 
@@ -39,7 +40,7 @@ add:
 
   gem require 'format_logs'
   
-to youe Gemfile and then run:
+to your Gemfile and then run:
 
   bundle update format_logs  
 
