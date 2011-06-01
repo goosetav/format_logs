@@ -10,7 +10,7 @@ Adds some simple formatting to the standard Rails BufferedLogger class.
 This solution aims to be something between the default logging which is missing information such as
 timestamps, process IDs and severity levels and a full logging solution like {log4r}[http://log4r.rubyforge.org/]
 
-Gem inspired by Paul Downman's {better_logging}[https://github.com/pauldowman/better_logging]
+Gem inspired by Paul Dowman's {better_logging}[https://github.com/pauldowman/better_logging]
 
 == Features
 
