@@ -1,7 +1,12 @@
 name: format_logs
 version: 0.1.0
 summary: "Adds some basic formatting to the default rails logs"
-description: "Adds some basic formatting to the default rails logs"
+description: |
+  Adds some simple formatting to the standard Rails BufferedLogger class.
+
+  This solution aims to be something between the default logging which is missing information such as
+  timestamps, process IDs and severity levels and a full logging solution like log4r
+
 license: MIT
 authors: goosetav
 homepage: http://github.com/goosetav/format_logs
