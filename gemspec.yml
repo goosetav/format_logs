@@ -1,0 +1,10 @@
+name: format_logs
+summary: "TODO: Summary"
+description: "TODO: Description"
+license: MIT
+authors: erik
+homepage: http://rubygems.org/gems/format_logs
+
+development_dependencies:
+  ore-tasks: ~> 0.4
+  rspec: ~> 2.4

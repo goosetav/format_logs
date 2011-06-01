@@ -1,0 +1,26 @@
+= format_logs
+
+* {Homepage}[http://rubygems.org/gems/format_logs]
+* {Documentation}[http://rubydoc.info/gems/format_logs/frames]
+
+== Description
+
+TODO: Description
+
+== Features
+
+== Examples
+
+  require 'format_logs'
+
+== Requirements
+
+== Install
+
+  $ gem install format_logs
+
+== Copyright
+
+Copyright (c) 2011 erik
+
+See LICENSE.txt for details.
