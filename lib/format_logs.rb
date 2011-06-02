@@ -22,7 +22,7 @@ module FormatLogs
     end
     
     def flush_cached_settings!
-      [@time_format, @show_time, @show_pid, @show_host].each {|a| a = nil}
+      [@time_format, @show_time, @show_pid, @show_host, @trim_leading_whitespace].each {|a| a = nil}
     end
     
     def default_settings
@@ -30,7 +30,8 @@ module FormatLogs
         :time_format => '%Y-%m-%d %H:%M:%S %z',
         :show_pid => true,
         :show_host => true,
-        :show_time => true
+        :show_time => true,
+        :trim_leading_whitespace => true
       }
     end
     
@@ -48,6 +49,10 @@ module FormatLogs
     
     def show_pid?
       @show_pid ||= settings[:show_pid]
+    end
+
+    def trim_leading_whitespace?
+      @trim_leading_whitespace ||= settings[:trim_leading_whitespace]
     end
     
     def show_host?
@@ -116,7 +121,11 @@ module FormatLogs
     end
     
     def format(severity, message)
-      "#{self.class.pid}#{self.class.hostname}#{self.class.timestamp}#{self.class.to_color(severity)} - #{message}"
+      "#{self.class.pid}#{self.class.hostname}#{self.class.timestamp}#{self.class.to_color(severity)} - #{trim_leading_whitespace(message)}"
+    end
+
+    def trim_leading_whitespace(m)
+      self.class.trim_leading_whitespace? ? m.gsub(/^\s*/,'') : m
     end
    
   end
